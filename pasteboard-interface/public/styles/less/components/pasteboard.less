@@ -1,0 +1,48 @@
+
+* {
+  box-sizing     : border-box;
+  font-family    : @font-family;
+  font-size      : @font-size;
+  line-height    : @font-lineheight;
+  letter-spacing : @font-letter-spacing;
+  color          : @color-font;
+}
+
+body {
+  margin     : 0;
+
+  & > section {
+    position   : fixed;
+    bottom     : -@section-height*1.5;
+    left       : 0;
+    width      : 100%;
+    height     : @section-height;
+    background : @color-pasteboard-bg;
+    box-shadow : 0 -2px 5px 1px rgba(0,0,0,0.3);
+    transition : bottom 0.5s;
+
+    &.visible {
+      bottom   : 0;
+    }
+
+  }
+
+}
+
+button {
+  display        : inline-block;
+  height         : @font-size-small * 2;
+  padding        : @font-size-small*0.6 @font-size-small @font-size-small*0.4;
+  background     : @color-button-bg;
+  border         : none;
+  outline        : none;
+  font-size      : @font-size-button;
+  text-transform : uppercase;
+  transition     : all 0.5s;
+
+  &:hover {
+    color      : @color-button-hover-text;
+    background : @color-button-hover-bg;
+  }
+
+}

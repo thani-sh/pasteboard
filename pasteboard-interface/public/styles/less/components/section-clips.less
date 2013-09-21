@@ -1,0 +1,119 @@
+
+#section-clips {
+  padding-left : @section-height * 3.25;
+  overflow-x   : scroll;
+
+  .controls {
+    position   : fixed;
+    bottom     : -@section-height*1.5;
+    left       : 0;
+    background : @color-controls-bg;
+    font-size  : 0;
+    transition : bottom 0.5s;
+
+    button.control {
+      display    : block;
+      float      : left;
+      width      : @section-height;
+      height     : @section-height;
+      padding    : 0 ( @section-height - @control-icon-size ) / 2;
+      background : transparent;
+
+      img {
+        opacity    : 1;
+        transition : opacity 0.5s;
+      }
+
+      &:hover img {
+        opacity  : 0.5;
+      }
+
+    }
+
+  }
+
+  .arrow {
+    position     : fixed;
+    bottom       : -@section-height*1.5;
+    left         : @section-height * 3;
+    display      : block;
+    float        : left;
+    width        : 0;
+    height       : 0;
+    border-style : solid;
+    border-width : @section-height/2 0 @section-height/2 0;
+    border-color : transparent transparent transparent @color-controls-bg;
+    transition   : all 0.5s;
+
+    &.active {
+      border-width : @section-height/2 0 @section-height/2 @section-height/4;
+    }
+
+  }
+
+  &.visible {
+
+    .controls {
+      bottom : 0;
+    }
+
+    .arrow {
+      bottom : 0;
+    }
+
+  }
+
+  #container {
+    display      : block;
+    height       : @section-height;
+    float        : left;
+    margin-right : -32767px;
+
+    .clip {
+      display      : block;
+      float        : left;
+      width        : @section-height * 2;
+      height       : @section-height;
+      margin       : 0 @font-size-small / 2;
+      overflow     : hidden;
+      background   : @color-pasteboard-bg;
+      border       : solid @font-size-small / 2 @color-pasteboard-bg;
+      border-width : @font-size-small/2 @font-size-small;
+      font-size    : @font-size-small;
+      box-shadow   : 0 2px 5px 1px rgba(0,0,0,0.0);
+      transition   : all 0.5s;
+
+      .content {
+        width          : @section-height * 4;
+        font-size      : @font-size-tiny;
+        line-height    : 1.2;
+        pointer-events : none;
+        transition     : all 0.5s;
+
+        img {
+          min-width    : @section-height * 2;
+          max-width    : @section-height * 4;
+        }
+
+        * {
+          display        : block;
+          padding        : 0 0 0 0;
+          margin         : 0 0 0 0;
+          border         : none;
+          color          : @color-font;
+          font-size      : @font-size-tiny;
+          line-height    : 1.2;
+          pointer-events : none;
+        }
+
+      }
+
+      &:hover {
+        box-shadow: 0 2px 5px 1px rgba(0,0,0,0.3);
+      }
+
+    }
+
+  }
+
+}
