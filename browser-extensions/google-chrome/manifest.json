@@ -1,0 +1,23 @@
+{
+    "manifest_version"       : 2
+  , "minimum_chrome_version" : "22"
+  , "name"                   : "Pasteboard"
+  , "version"                : "0.1.1"
+  , "description"            : "Pasteboard"
+  , "permissions"            : ["<all_urls>", "tabs", "storage"]
+  , "content_scripts"        : [
+      {
+          "matches" : ["<all_urls>"]
+        , "css"     : ["styles/contentstyles.css"]
+        , "js"      : ["vendor/jschannel.js"
+                      ,"scripts/Communications.js"
+                      ,"scripts/DragHelper.js"
+                      ,"scripts/GestureHelper.js"
+                      ,"scripts/Pasteboard.js"
+                      ,"scripts/PasteboardClip.js"
+                      ,"scripts/PasteboardDropzone.js"
+                      ,"scripts/Initializer.js"
+                      ]
+      }
+    ]
+}
