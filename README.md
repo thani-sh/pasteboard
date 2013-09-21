@@ -1,0 +1,4 @@
+pasteboard
+==========
+
+Creative Commons Pasteboard
