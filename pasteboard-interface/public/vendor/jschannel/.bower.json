@@ -1,0 +1,14 @@
+{
+  "name": "jschannel",
+  "homepage": "https://github.com/mozilla/jschannel",
+  "_release": "65356baa89",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "65356baa89106e698fe14800de67557b2366470a"
+  },
+  "_source": "git@github.com:mozilla/jschannel.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:mozilla/jschannel.git",
+  "_direct": true
+}
