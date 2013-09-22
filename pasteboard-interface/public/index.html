@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="pasteboard">
+
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Creative Commons Pasteboard</title>
+      <link rel="stylesheet" href="vendor/elusive-iconfont/css/elusive-webfont.css">
+      <link rel="stylesheet" href="styles/styles.css">
+      <script src="vendor/jschannel/src/jschannel.js"></script>
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src='https://login.persona.org/include.js'></script>
+      <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+      <script src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+      <script src="vendor/angular/angular.min.js"></script>
+      <script src="vendor/angular-fire/angularfire.min.js"></script>
+  </head>
+
+  <body ng-controller="PasteboardCtrl">
+
+      <section id="section-clips" class="section">
+        <div id="container">
+          <div class="clip" draggable="true" ng-repeat="(clip_id, clip) in clips">
+            <div class="content" ng-bind-html-unsafe="clip.html"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="control popover">
+            <img src="images/settings.png" alt="Settings">
+            <ul class="menu">
+              <li class="sep">Settings Menu</li>
+              <!-- <li><a href="#" ng-click="login()" class="center"><i class="icon-user"></i> Login</a></li> -->
+              <li><a href="#" ng-click="logout()" class="center"><i class="icon-off"></i> Logout</a></li>
+            </ul>
+          </button>
+          <button class="control popover">
+            <img src="images/folder.png" alt="Open">
+            <ul class="menu">
+              <li class="sep">Google Drive</li>
+              <li>
+                <a href="#"><i class="icon-folder"></i> Directory 1</a>
+                <ul class="menu">
+                  <li class="sep">Directory 1</li>
+                  <li>
+                    <a href="#"><i class="icon-folder"></i> Directory 2</a>
+                    <ul class="menu">
+                      <li class="sep">Directory 2</li>
+                      <li><a href="#"><i class="icon-file"></i> Document 3</a></li>
+                      <li><a href="#"><i class="icon-file"></i> Document 3</a></li>
+                      <li><a href="#"><i class="icon-file"></i> Document 3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#"><i class="icon-file"></i> Document 2</a></li>
+                  <li><a href="#"><i class="icon-file"></i> Document 2</a></li>
+                  <li><a href="#"><i class="icon-file"></i> Document 2</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="icon-file"></i> Document 1</a></li>
+              <li><a href="#"><i class="icon-file"></i> Document 1</a></li>
+              <li><a href="#"><i class="icon-file"></i> Document 1</a></li>
+              <li class="sep">Recent Documents</li>
+              <li><a href="#"><i class="icon-file"></i> Document 1</a></li>
+              <li><a href="#"><i class="icon-file"></i> Document 1</a></li>
+            </ul>
+          </button>
+          <button class="control popover">
+            <img src="images/newpaper.png" alt="Document" id="temp-doc-image">
+            <ul class="menu" ng-hide="true">
+              <li class="sep">Document Menu</li>
+              <li><a href="#"><i class="icon-file-new"></i> New Document</a></li>
+              <li><a href="#"><i class="icon-edit"></i> Go To Document</a></li>
+            </ul>
+          </button>
+          <div class="arrow"></div>
+          <br style="clear:both">
+        </div>
+      </section>
+
+      <section id="section-guest" class="section">
+        You're almost done. Please <button ng-click="login()">Login</button> to start using the Pasteboard.
+      </section>
+
+      <script src="scripts/scripts.js"></script>
+
+  </body>
+
+</html>
