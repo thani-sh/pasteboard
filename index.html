@@ -4,32 +4,40 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Pasteboard by mnmtanish</title>
-
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/mnmtanish/pasteboard">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/mnmtanish/pasteboard/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/mnmtanish/pasteboard/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
     <div class="wrapper">
-      <header>
-        <h1 class="header">Pasteboard</h1>
-        <p class="header">Creative Commons Pasteboard</p>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/mnmtanish/pasteboard/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/mnmtanish/pasteboard/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/mnmtanish/pasteboard">View On GitHub</a></li>
-        </ul>
-
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/mnmtanish">mnmtanish</a></p>
-
-
-      </header>
       <section>
+        <div id="title">
+          <h1>Pasteboard</h1>
+          <p>Creative Commons Pasteboard</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/mnmtanish">mnmtanish</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
         <h1>
 <a name="creative-commons-pasteboard" class="anchor" href="#creative-commons-pasteboard"><span class="octicon octicon-link"></span></a>Creative Commons Pasteboard</h1>
 
@@ -47,24 +55,100 @@
 
 <p>Browser extensions are used to inject required scripts into the page in order to do the following:</p>
 
+<h3>
+<a name="functions-of-browser-extension" class="anchor" href="#functions-of-browser-extension"><span class="octicon octicon-link"></span></a>Functions of browser extension</h3>
+
 <ul>
 <li>Display the pasteboard user interface using an iframe</li>
 <li>Capture mouse gestures ( drag clips towards page bottom ) and display the UI</li>
 <li>Keep the channel ready for messages from the pasteboard</li>
-</ul><p><a href="browser-extensions">Read more about browser extensions</a></p>
+</ul><h3>
+<a name="supported-browsers" class="anchor" href="#supported-browsers"><span class="octicon octicon-link"></span></a>Supported Browsers</h3>
 
-<h2>
+<ul>
+<li><a href="google-chrome">Google Chrome</a></li>
+<li>Mozilla Firefox (todo)</li>
+<li>Opera (todo)</li>
+</ul><h3>
+<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h3>
+
+<ul>
+<li><strong>Revise this TODO list</strong></li>
+<li>Support Mozilla Firefox</li>
+</ul><h3>
+<a name="google-chrome" class="anchor" href="#google-chrome"><span class="octicon octicon-link"></span></a>Google Chrome</h3>
+
+<h4>
+<a name="mouse-gestures" class="anchor" href="#mouse-gestures"><span class="octicon octicon-link"></span></a>Mouse Gestures</h4>
+
+<p>The pasteboard is displayed when user selects content and drags it towards page bottom. gesture is recognized if user drags the clip <code>5</code> pixels towards page bottom within <code>300</code> milliseconds.</p>
+
+<h4>
+<a name="communications-with-pasteboard-user-interface" class="anchor" href="#communications-with-pasteboard-user-interface"><span class="octicon octicon-link"></span></a>Communications with Pasteboard User Interface</h4>
+
+<p>Currently all communications with pasteboard is done directly using <a href="https://github.com/mozilla/jschannel">Mozilla jschannel</a>. The iframe is used to create the channel.</p>
+
+<h4>
+<a name="todo-1" class="anchor" href="#todo-1"><span class="octicon octicon-link"></span></a>TODO</h4>
+
+<ul>
+<li><strong>Revise this TODO list</strong></li>
+<li>Improved drag gesture recognizer</li>
+</ul><h2>
 <a name="pasteboard-user-interface" class="anchor" href="#pasteboard-user-interface"><span class="octicon octicon-link"></span></a>Pasteboard User Interface</h2>
 
 <p>The app which loads inside the iframe created by the browser extension. At this stage it uses firebase to store clip content and firebase built-in authentication using Mozilla Persona. The interface is managed by AngularJS using AngularFire to connect with firebase.</p>
 
-<p><a href="pasteboard-interface">Read more about pasteboard user interface</a></p>
+<h3>
+<a name="content-management" class="anchor" href="#content-management"><span class="octicon octicon-link"></span></a>Content Management</h3>
+
+<p>To keep data in sync, the pasteboard UI uses AngularJS and AngularFire and creates a 3-way data-binding between Firebase, Javascript and the page (DOM).</p>
+
+<h3>
+<a name="user-registrationlogin" class="anchor" href="#user-registrationlogin"><span class="octicon octicon-link"></span></a>User Registration/Login</h3>
+
+<p>Uses Firebase built-in <a href="https://www.firebase.com/docs/security/authentication.html">authentication</a> <a href="https://www.firebase.com/docs/security/simple-login-overview.html">"Firebase simple auth"</a> via the <a href="http://angularfire.com/documentation.html#authentication">AngularFire</a> plugin. No user registration is required at the moment. The account and related data is created in Firebase when user logs in for the first time.</p>
+
+<h3>
+<a name="communications-with-browser-extension" class="anchor" href="#communications-with-browser-extension"><span class="octicon octicon-link"></span></a>Communications with Browser Extension</h3>
+
+<p>Currently all communications with browser is done directly using <a href="https://github.com/mozilla/jschannel">Mozilla jschannel</a>.</p>
+
+<h5>
+<a name="listens-to" class="anchor" href="#listens-to"><span class="octicon octicon-link"></span></a>Listens to</h5>
+
+<ul>
+<li>
+<strong>addClip(clip)<br></strong>
+clip : A javascript object which contains clip and attribution data</li>
+</ul><h5>
+<a name="calls" class="anchor" href="#calls"><span class="octicon octicon-link"></span></a>Calls</h5>
+
+<ul>
+<li>
+<strong>ResizePasteboard(size)<br></strong>
+size : 'normal', 'maximized'</li>
+</ul><h3>
+<a name="todo-2" class="anchor" href="#todo-2"><span class="octicon octicon-link"></span></a>TODO</h3>
+
+<ul>
+<li><strong>Revise this TODO list</strong></li>
+<li>Use html5 appcache to speedup loading resources</li>
+<li>Use html5 localStorage to cache clip data and user preferences</li>
+<li>Synchronize localStorage data with firebase data</li>
+<li>Rewrite the code to use CommonJS modules for better namespace management</li>
+<li>Decrease dependencies (AngularJS, AngularFire, Firebase Authentication, etc.)</li>
+<li>Use pasteboard server authentication instead of Firebase built-in system</li>
+<li>Connect and use Google Drive API to browse and open documents</li>
+<li>Implement dragging clips from pasteboard to Google Docs</li>
+<li>A javascript/node.js API to integrate the pasteboard with other editors</li>
+<li>Implement dragging clips from pasteboard to other editors using API</li>
+<li>Automatically add attribution information to documents when using clips</li>
+</ul>
       </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+    
   </body>
 </html>
