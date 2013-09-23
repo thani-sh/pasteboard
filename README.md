@@ -12,8 +12,8 @@ Browser extensions are used to inject required scripts into the page in order to
  * Capture mouse gestures ( drag clips towards page bottom ) and display the UI
  * Keep the channel ready for messages from the pasteboard
 
-[Read more about browser extensions](browser-extensions/README.md)
+[Read more about browser extensions](tree/master/browser-extensions)
 
 ## <span style="font-weight: normal;">Pasteboard User Interface</span>
 
-[Read more about pasteboard user interface](pasteboard-interface/README.md)
+[Read more about pasteboard user interface](tree/master/pasteboard-interface)
