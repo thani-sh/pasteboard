@@ -1,5 +1,5 @@
-# <span style="font-weight: normal;">Creative Commons Pasteboard</span>
+# Creative Commons Pasteboard
 
-## <span style="font-weight: normal;">Browser Extensions</span>
+## Browser Extensions
 
-### <span style="font-weight: normal;">Google Chrome</span>
+### Google Chrome

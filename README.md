@@ -1,6 +1,6 @@
-# <span style="font-weight: normal;">Creative Commons Pasteboard</span>
+# Creative Commons Pasteboard
 
-## <span style="font-weight: normal;">Introduction</span>
+## Introduction
 
 The Creative Commons Pasteboard is a browser extension used to help users easily clip content from different sources aroud the web. It also helps users by automatically adding attribution information when users paste their clips into documents.
 
@@ -8,7 +8,7 @@ The Creative Commons Pasteboard is a browser extension used to help users easily
 
 [Creative Commons Wiki about Pasteboard](http://wiki.creativecommons.org/Products/Pasteboard)
 
-## <span style="font-weight: normal;">Browser Extensions</span>
+## Browser Extensions
 
 Browser extensions are used to inject required scripts into the page in order to do the following:
 
@@ -18,7 +18,7 @@ Browser extensions are used to inject required scripts into the page in order to
 
 [Read more about browser extensions](browser-extensions)
 
-## <span style="font-weight: normal;">Pasteboard User Interface</span>
+## Pasteboard User Interface
 
 The app which loads inside the iframe created by the browser extension. At this stage it uses firebase to store clip content and firebase built-in authentication using Mozilla Persona. The interface is managed by AngularJS using AngularFire to connect with firebase.
 
