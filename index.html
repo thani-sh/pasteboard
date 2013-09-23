@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Pasteboard by mnmtanish</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Pasteboard</h1>
+        <p class="header">Creative Commons Pasteboard</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/mnmtanish/pasteboard/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/mnmtanish/pasteboard/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/mnmtanish/pasteboard">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/mnmtanish">mnmtanish</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="creative-commons-pasteboard" class="anchor" href="#creative-commons-pasteboard"><span class="octicon octicon-link"></span></a>Creative Commons Pasteboard</h1>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>The Creative Commons Pasteboard is a browser extension used to help users easily clip content from different sources aroud the web. It also helps users by automatically adding attribution information when users paste their clips into documents.</p>
+
+<p><img src="http://wiki.creativecommons.org/images/2/2c/Pasteboard_mockup.png" alt="Early Mockup"></p>
+
+<p><a href="http://wiki.creativecommons.org/Products/Pasteboard">Creative Commons Wiki about Pasteboard</a></p>
+
+<h2>
+<a name="browser-extensions" class="anchor" href="#browser-extensions"><span class="octicon octicon-link"></span></a>Browser Extensions</h2>
+
+<p>Browser extensions are used to inject required scripts into the page in order to do the following:</p>
+
+<ul>
+<li>Display the pasteboard user interface using an iframe</li>
+<li>Capture mouse gestures ( drag clips towards page bottom ) and display the UI</li>
+<li>Keep the channel ready for messages from the pasteboard</li>
+</ul><p><a href="browser-extensions">Read more about browser extensions</a></p>
+
+<h2>
+<a name="pasteboard-user-interface" class="anchor" href="#pasteboard-user-interface"><span class="octicon octicon-link"></span></a>Pasteboard User Interface</h2>
+
+<p>The app which loads inside the iframe created by the browser extension. At this stage it uses firebase to store clip content and firebase built-in authentication using Mozilla Persona. The interface is managed by AngularJS using AngularFire to connect with firebase.</p>
+
+<p><a href="pasteboard-interface">Read more about pasteboard user interface</a></p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
